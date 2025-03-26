@@ -31,7 +31,7 @@
 from legged_gym.envs.base.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class A1RoughCfg( LeggedRobotCfg ):
-    class init_state( LeggedRobotCfg.init_state ):
+    class init_state( LeggedRobotCfg.init_state ): # 在平坦地面上的初始状态
         pos = [0.0, 0.0, 0.35] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
             'FL_hip_joint': 0.1,   # [rad]
@@ -50,7 +50,7 @@ class A1RoughCfg( LeggedRobotCfg ):
             'RR_calf_joint': -1.5,    # [rad]
         }
 
-    class init_state_slope( LeggedRobotCfg.init_state ):
+    class init_state_slope( LeggedRobotCfg.init_state ): # 在斜坡地形上的初始状态
         pos = [0.5, 0.0, 0.24] # x,y,z [m]
         default_joint_angles = { # = target angles [rad] when action = 0.0
             'FL_hip_joint': 0.03,   # [rad]

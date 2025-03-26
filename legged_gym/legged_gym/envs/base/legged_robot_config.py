@@ -46,7 +46,7 @@ class LeggedRobotCfg(BaseConfig):
         n_proprio = 3 + 2 + 3 + 4 + 36 + 5
         history_len = 10
 
-        num_observations = n_proprio + n_scan + history_len*n_proprio + n_priv_latent + n_priv #n_scan + n_proprio + n_priv #187 + 47 + 5 + 12 
+        num_observations = n_proprio + n_scan + history_len * n_proprio + n_priv_latent + n_priv #n_scan + n_proprio + n_priv #187 + 47 + 5 + 12
         num_privileged_obs = None # if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise 
         num_actions = 12
         env_spacing = 3.  # not used with heightfields/trimeshes 
@@ -92,7 +92,7 @@ class LeggedRobotCfg(BaseConfig):
         camera_terrain_num_rows = 10
         camera_terrain_num_cols = 20
 
-        position = [0.27, 0, 0.03]  # front camera
+        position = [0.27, 0, 0.03]  # front camera. Aliengo[0.32, 0, 0.03]
         angle = [-5, 5]  # positive pitch down
 
         update_interval = 5  # 5 works without retraining, 8 worse
